@@ -18,11 +18,23 @@ def fromHex2B10(hex_number):
 
     new_num.reverse() #
     for jj in new_num:
-      answer1 += int(jj) * (2**(int(new_num.index(jj))))
+      answer1 += (int(jj) * (16**(int(new_num.index(jj)))))
     return answer1
 
-aa = fromHex2B10('A5')
+def base10toHex(number):
+  answer = ''
+  hex_alpha = 'ABCDEFG'
+  hex_nums = [10,11,12,13,14,15]
+
+  while number > 0:
+    k = number % 16
+    number = number // 16
+    if k in hex_nums:
+      k =hex_alpha[hex_nums.index(k)]
+      answer += str(k)
+    else:
+      answer += str(k)
+  return answer[::-1]
+
+aa= base10toHex(165)
 print(aa)
-
-
-# a ='1D7F'
