@@ -1,3 +1,4 @@
+from art import *
 def fromHex2B10(hex_number):
   new_num= []
   hex_alpha = 'ABCDEFG'
@@ -63,7 +64,8 @@ def toBase10(from_base, number):
 
 
 def main():
-  print("Welcome to the Newton's Number bases convertor")
+  print("Welcome to the Newton's")
+  print(logo)
   print()
   calculating = True
   while calculating:
